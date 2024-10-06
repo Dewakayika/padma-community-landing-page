@@ -57,16 +57,59 @@
         <link href="assets/lib/slick-carousel/slick-theme.css" rel="stylesheet">
         <link href="assets/css/theme.css" rel="stylesheet">
     </head>
+    <style>
+        /* Default styles for desktop */
+        .navbar .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                width: 25px; /* Smaller logo on mobile */
+            }
+
+            .navbar-toggler {
+                padding: 0.25rem 0.5rem;
+            }
+
+            .navbar-collapse {
+                justify-content: flex-end; /* Align menu to the right on mobile */
+            }
+
+            .navbar-collapse .btn {
+                width: 100%; /* Full-width buttons on mobile */
+                margin-bottom: 0.5rem; /* Add spacing between buttons */
+            }
+
+            .navbar-collapse .btn-secondary {
+                margin-right: 0; /* Reset margin-right on mobile */
+            }
+
+            .navbar-toggler-icon {
+                width: 1.5rem; /* Smaller toggle icon */
+                height: 1.5rem;
+            }
+
+            /* Button size for small screens */
+            .btn {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
 
     <body>
         <!-- ===============================================-->
         <!-- Main Content-->
         <!-- ===============================================-->
         <main class="main" id="top">
-            <nav
-                class="navbar bg-dark navbar-dark sticky-kit navbar-expand-lg py-3 sticky-kit">
+            <nav class="navbar bg-dark navbar-dark sticky-kit navbar-expand-lg py-3 sticky-kit">
                 <div class="container">
-                    <a class="navbar-brand" href="index-2.html"><img src="assets/img/logos/padma.png" alt="logo" width="30"/></a>
+                    <a class="navbar-brand" href="index-2.html">
+                        <img src="assets/img/logos/padma.png" alt="logo" width="30" />
+                    </a>
                     <button
                         class="navbar-toggler collapsed"
                         type="button"
@@ -74,14 +117,14 @@
                         data-target="#navbarStandard"
                         aria-controls="navbarStandard"
                         aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span></button>
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse ml-xl-7 ml-xxl-9" id="navbarStandard">
-                        
                         <div class="ml-auto mt-3 mt-lg-0">
                             <a class="btn btn-sm btn-secondary mr-xl-3 mr-lg-2 mr-3" href="https://dashboard.padmastudio.io/" target="_blank">Sign In</a>
-                            <a class="btn-primary btn btn-sm" href="https://dashboard.padmastudio.io/register" target="_blank">
-                                Sign Up</a>
+                            <a class="btn-primary btn btn-sm" href="https://dashboard.padmastudio.io/register" target="_blank">Sign Up</a>
                         </div>
                     </div>
                 </div>
@@ -686,6 +729,11 @@
             <script src="assets/lib/plyr/plyr.min.js"></script>
             <script src="assets/lib/slick-carousel/slick.min.js"></script>
             <script src="assets/js/theme.js"></script>
+            <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
             <script>
                 AOS.init({
