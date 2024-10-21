@@ -18,24 +18,13 @@
         <!-- ===============================================-->
         <!-- Favicons-->
         <!-- ===============================================-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="assets/img/favicons/apple-touch-icon.png">
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/img/favicons/favicon-32x32.png">
+
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="assets/img/favicons/favicon-16x16.png">
-        <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="assets/img/favicons/favicon.ico">
+            href="assets/img/favicons/padma.png">
+        
         <link rel="manifest" href="assets/img/favicons/manifest.json">
         <meta
             name="msapplication-TileImage"
@@ -45,7 +34,7 @@
         <!-- ===============================================-->
         <!-- Stylesheets-->
         <!-- ===============================================-->
-        <link
+        <link   
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900"
             rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -56,6 +45,10 @@
         <link href="assets/lib/slick-carousel/slick.css" rel="stylesheet">
         <link href="assets/lib/slick-carousel/slick-theme.css" rel="stylesheet">
         <link href="assets/css/theme.css" rel="stylesheet">
+
+        
+
+        
     </head>
     <style>
         /* Default styles for desktop */
@@ -98,6 +91,136 @@
                 padding: 0.5rem;
             }
         }
+        
+        .title-webtoon{
+            position: absolute;
+            bottom: 5%;
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        .layer-background{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+            z-index: 1;
+            pointer-events: none; 
+            opacity: 80%;
+        }
+
+        div.scroll-container {
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+        
+        div.scroll-container img {
+            padding: 10px;
+        }
+        
+
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        @media screen and (max-width: 600px) {
+            .modal-content{
+                top: 2%;
+                width: 100%;
+            }
+            .div.scroll-container img {
+            padding: 10px;
+            height: 200px;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .div.scroll-container img {
+                padding: 10px;
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .call-action {
+                text-align: left;
+                align-items: start;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+
+          /* Modal */
+        /* Modal Background */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.792); /* Black w/ opacity */
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 3% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            z-index: 1;
+        }
+        
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .leaderboard img{
+            width: 100%;
+            height: auto;
+        }
+
+        /* Default for larger screens (vertical scroll) */
+        .scroll-content-vertical {
+            flex-direction: column; 
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .testimonial{
+            display: flex;
+        }
+
+        /* For mobile screens, change to horizontal scroll */
+        @media (max-width: 768px) {
+            .scroll-content-vertical .testimonial .quotes {
+                flex-direction: row; /* Horizontal scrolling */
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .scroll-content-vertical .testimonial {
+                text-align: center;
+                flex-direction: column; 
+                display: inline-block;
+                width: auto;
+            }
+        }
+
     </style>
 
     <body>
@@ -107,7 +230,7 @@
         <main class="main" id="top">
             <nav class="navbar bg-dark navbar-dark sticky-kit navbar-expand-lg py-3 sticky-kit">
                 <div class="container">
-                    <a class="navbar-brand" href="index-2.html">
+                    <a class="navbar-brand">
                         <img src="assets/img/logos/padma.png" alt="logo" width="30" />
                     </a>
                     <button
@@ -131,24 +254,20 @@
             </nav>
             <section class="bg-dark py-xxl-8 py-xl-6 py-lg-6 py-0">
                 <div class="bg-holder" style="background-image:url(assets/img/bg-img/home-headerr.png);"></div>
-                <!--/.bg-holder-->
-                <div class="bg-holder" style="background-image:url(assets/img/bg-img/appland_bg_companies.png); background-position:bottom; background-size:100%; z-index: 3;"></div>
-                <!--/.bg-holder-->
+                <!-- <div class="bg-holder" style="background-image:url(assets/img/bg-img/appland_bg_companies2.png); background-position:bottom; background-size:100%; z-index: 0;"></div> -->
                 <div class="container" data-aos="fade-up" data-aos-delay="200">
                     <div class="row">
                         <div class="col">
                             <div class="position-relative text-center mb-4">
                                 <h1 class="display-2 text-white font-weight-medium fs-xl-0 fs-md-0 fs-0 mt-4 mt-md-0">
                                     <span class="d-inline-block position-relative">Our Success Stories</h1>
-                                    <h1
-                                        class="display-2 text-white font-weight-bold fs-xl-10 fs-md-8 fs-4 mt-4 mt-md-0">
-                                        <span class="d-inline-block position-relative">START WITH YOU </span class="heading-shapes heading-shapes-right d-none d-md-block" style="background-image: url(assets/img/illustrations/shapes-1.png); height: 80px; width: 90px"></span><br/></h1>
+                                    <h1 class="display-2 text-white font-weight-bold fs-xl-10 fs-md-8 fs-4 mt-4 mt-md-0">
+                                        <span class="d-inline-block position-relative">START WITH YOU </span class="heading-shapes heading-shapes-right d-none d-md-block" style="background-image: url(assets/img/illustrations/shapes-1.png); height: 80px; width: 90px;"></span><br/></h1>
                                     <p
                                         class="fs-md-0 fs-0 text-capitalize mt-4 mx-auto"
                                         data-zanim-xs='{"delay":0.3,"duration":1.5}'>Join Our Community for Your Professional Learning, and Growth<br/>Where Our Success Journey Begins!</p>
                                     <form
-                                        class="mb-6 mailbluster-subscribe"
-'>
+                                        class="mb-6 mailbluster-subscribe">
                                         <div class="form-row justify-content-center">
                                             <div class="col-lg-4 col-md-6 col-sm-9">
                                                 <div class="mailbluster-feedback"></div>
@@ -186,37 +305,76 @@
                                         <img
                                             class="img-fluid position-relative"
                                             src="assets/img/gallery/mac-ipad.png"
-                                            alt=""
-                                            /></div>
+                                            alt=""/></div>
+
                                 </div>
                             </div>
                         </div>
-<!--                         <div class="row justify-content-center" style="z-index: 100; position: relative;">
-                            <div class="col-xxl-10 col-xl-9 col-lg-8 col-10 mb-md-4 mb-lg-0 text-center">
-                                <h6 class="mb-xxl-6 mb-xl-5 mb-lg-4 mb-md-4 text-800 font-weight-medium fs-md-0 fs--1 position-relative z-index-1">
-                                    trusted by companies like this
-                                </h6>
-                                <div>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="191"/>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="156"/>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="162"/>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="191"/>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="162"/>
-                                    <img class="img-fluid" src="assets/img/logos/vivion.png" alt="" width="191"/>
-                                </div>
+                        <div class="row justify-content-center absolute py-6">
+                            <div class="w-full col-xxl-10 col-xl-10 col-lg-10 col-9 mb-md-4 mb-lg-0 text-center">
+                                <h6 class="mb-xxl-6 mb-xl-5 mb-lg-4 mb-md-4 text-800 font-weight-light fs-md-0 fs--1 text-white position-relative py-2">Trusted by companies</h6>
+                                    <div class="scroll-container" style="overflow: hidden;">
+                                        <div class="scroll-content d-flex">
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/vivion.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/dlsite-ai.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/comipo.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/vivion.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/dlsite-ai.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/comipo.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/vivion.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/dlsite-ai.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/comipo.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/vivion.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/dlsite-ai.png" alt="" width="auto" height="45">
+                                            </div>
+
+                                            <div style="padding-left: 20px; padding-right: 20px;">
+                                                <img src="assets/img/logos/comipo.png" alt="" width="auto" height="45">
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </section>
 
-                <!-- ============================================-->
-                <!-- <section> begin ============================-->
-                <section class="pb-0 overflow-hidden">
-                    <div class="container">
+
+                    <div class="container mt-4">
                         <div class="row justify-content-center">
-                            <div class="col text-center pt-lg-7 pt-5">
-                                <div
-                                    class="bg-holder d-none d-md-block"
+                            <div class="col text-center pt-lg-7">
+                                <div class="bg-holder d-none d-md-block"
                                     style="background-image:url(assets/img/illustrations/home/home-vector.png);background-size:28%;background-position:80% 0%;"></div>
                                 <!--/.bg-holder-->
                                 <div class="row justify-content-center">
@@ -260,9 +418,6 @@
                         </div>
                     </div>
                     <!-- end of .container-->
-                </section>
-                <!-- <section> close ============================-->
-                <!-- ============================================-->
 
                 <section class="py-xxl-11 py-xl-9 py-lg-11 pb-md-7 pt-10 overflow-hidden">
                     <div
@@ -284,11 +439,11 @@
                                             <img
                                                 class="text-primary fa-stack-1x"
                                                 src="assets/img/icons/Sketchup.png"
-                                                alt=""
+                                                alt="sketchup"
                                                 style="width: 21px; border-radius: 100%;">
                                         </span>
-                                        <h5 class="font-weight-bold text-white mt-2">3D Design</h5>
-                                        <p class="text-500 line-height-1">Ajustment angle</p>
+                                        <h5 class="font-weight-bold text-white mt-2">SketchUp</h5>
+                                        <p class="text-500 line-height-1">3D Background</p>
                                     </div>
                                     <div class="col-xl-5 col-lg-6 col-md-5 mt-3 mt-md-0">
                                         <span class="fa-stack">
@@ -296,11 +451,37 @@
                                             <img
                                                 class="text-primary fa-stack-1x"
                                                 src="assets/img/icons/Photoshop.png"
-                                                alt=""
+                                                alt="photoshop"
                                                 style="width: 21px; border-radius: 100%;">
                                         </span>
-                                        <h5 class="font-weight-bold text-white mt-2">Panel Placing</h5>
+                                        <h5 class="font-weight-bold text-white mt-2">Photoshop</h5>
                                         <p class="text-500 line-height-1">Placing background layers</p>
+                                    </div>
+
+                                    <div class="col-xl-5 col-lg-6 col-md-5 mt-3 mt-md-0">
+                                        <span class="fa-stack">
+                                            <span class="fas fa-circle fa-stack-2x text-white"></span>
+                                            <img
+                                                class="text-primary fa-stack-1x"
+                                                src="assets/img/icons/snap-logo.png"
+                                                alt="snaptoon"
+                                                style="width: 21px; border-radius: 100%;">
+                                        </span>
+                                        <h5 class="font-weight-bold text-white mt-2">Snaptoon</h5>
+                                        <p class="text-500 line-height-1">3D Realistic Rendering</p>
+                                    </div>
+
+                                    <div class="col-xl-5 col-lg-6 col-md-5 mt-3 mt-md-0">
+                                        <span class="fa-stack">
+                                            <span class="fas fa-circle fa-stack-2x text-white"></span>
+                                            <img
+                                                class="text-primary fa-stack-1x"
+                                                src="assets/img/icons/discord.png"
+                                                alt="discord"
+                                                style="width: 21px; border-radius: 100%;">
+                                        </span>
+                                        <h5 class="font-weight-bold text-white mt-2">Discord</h5>
+                                        <p class="text-500 line-height-1">Communication Channel</p>
                                     </div>
                                 </div>
                             </div>
@@ -340,68 +521,13 @@
                                 class="col-xl col-lg-7 col-10"
                                 data-zanim-lg='{"animation":"slide-left","delay":0.5,"duration":1.5}'
                                 data-zanim-xs='{"delay":0.5,"duration":1.5}'>
-                                <h1
-                                    class="text-white fs-xl-5 font-weight-bold fs-lg-4 fs-md-3 fs-2 text-center">
-                                    Fits into any workflow.</h1>
-                                <p
-                                    class="text-gray fs-xl-0 font-weight-medium fs-lg-0 fs-md-0 fs-0 text-center  subtitle">Our
-                                    system goes with almost any kind of integrations and supports almost every
-                                    platform.</p>
+                                <h1 class="text-white fs-xl-5 font-weight-bold fs-lg-4 fs-md-3 fs-2 text-center"> Best Intern of The Week</h1>
+                                <p class="text-gray fs-xl-0 font-weight-medium fs-lg-0 fs-md-0 fs-0 text-center subtitle">We truly appreciate every student who pours their positive energy into learning and growing with Padma Creative Studio. </p>
                                 <div class="row mt-5 justify-content-center justify-content-lg-center">
-                                    <div
-                                        class="col-md-5 col-10 hover-cardgroup bg-extra-1 mb-xl-4 mb-3 mr-xl-4 mr-md-3 mb-3">
-                                        <div class="media align-items-center"><img
-                                            class="img-fluid"
-                                            src="assets/img/icons/Sketchup.png"
-                                            alt=""
-                                            style="width: 50px;"/>
-                                            <div class="card-body text-left">
-                                                <a class="stretched-link" href="#!"></a>
-                                                <p class="mb-0 font-weight-bold title text-white fs-xl-0 fs-lg--1 fs-0">SketchUp</p>
-                                                <p class="text-500 mb-0 subtitle fs-xl-0 fs-lg--1 fs-0">3D Background</p>
-                                            </div>
-                                        </div>
+                                    <div class="leaderboard container">
+                                        <img src="assets/img/team/leaderboard.png" alt="leaderboard">
                                     </div>
-                                    <div class="col-md-5 col-10 hover-cardgroup bg-extra-1 mb-xl-4 mb-3">
-                                        <div class="media align-items-center"><img
-                                            class="img-fluid"
-                                            src="assets/img/icons/Photoshop.png"
-                                            alt=""
-                                            style="width: 60px;"/>
-                                            <div class="card-body text-left">
-                                                <a class="stretched-link" href="#!"></a>
-                                                <p class="mb-0 font-weight-bold title text-white fs-xl-0 fs-lg--1 fs-0">Photoshop</p>
-                                                <p class="text-500 mb-0 subtitle fs-xl-0 fs-lg--1 fs-0">Editing Tools</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="col-md-5 col-10 hover-cardgroup bg-extra-1 mr-xl-4 mr-md-3 mb-3 mb-md-0">
-                                        <div class="media align-items-center"><img
-                                            class="img-fluid"
-                                            src="assets/img/icons/snap-logo.png"
-                                            alt=""
-                                            style="width: 50px;"/>
-                                            <div class="card-body text-left">
-                                                <a class="stretched-link" href="#!"></a>
-                                                <p class="mb-0 font-weight-bold title text-white fs-xl-0 fs-lg--1 fs-0">Snaptoon</p>
-                                                <p class="text-500 mb-0 subtitle fs-xl-0 fs-lg--1 fs-0">Realistic Rendering Tools</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 col-10 hover-cardgroup bg-extra-1">
-                                        <div class="media align-items-center"><img
-                                            class="img-fluid"
-                                            src="assets/img/icons/discord.png"
-                                            alt=""
-                                            style="width: 50px;"/>
-                                            <div class="card-body text-left">
-                                                <a class="stretched-link" href="#!"></a>
-                                                <p class="mb-0 font-weight-bold title text-white fs-xl-0 fs-lg--1 fs-0">Discord</p>
-                                                <p class="text-500 mb-0 subtitle fs-xl-0 fs-lg--1 fs-0">Communication</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -417,20 +543,17 @@
                     <div class="container">
                         <div class="row flex-center justify-content-xxl-between" data-aos="fade-up" data-aos-delay="0">
                             <div
-                                class="col-xxl-5 col-xl-6 col-lg-7 col-11 pt-8 pb-xl-8 pb-4 pl-xxl-0 pl-xl-6 order-xl-1"><img
-                                class="position-absolute d-none d-lg-block w-50 r-0"
+                                class="col-xxl-5 col-xl-6 col-lg-7 col-11 pl-xxl-0 pl-xl-6 order-xl-1"><img class="position-absolute d-none d-lg-block w-50 r-0"
                                 src="assets/img/illustrations/home/home-vector.png"
                                 alt=""
                                 style="top:5%"/>
                                 <div class="text-center text-xl-left position-relative">
-                                    <h1 class="font-weight-bold text-dark fs-xxl-5 fs-4">
+                                    <h1 class="font-weight-bold text-dark fs-lg-4 fs-md-3 fs-2 ">
                                         <span class="position-relative">Excited about our team?<span
                                             class="heading-shapes heading-shapes-right"
-                                            style="background-image: url; height: 80px; width: 90px"></span></span><br/>we are hiring!</h1>
+                                            style="background-image: url; height: 80px; width: 90px"></span></span>we are hiring!</h1>
                                     <p class="text-900 mt-4 w-lg-75 mx-lg-auto mx-xl-0">We are looking for a passionate digital talents who are dedicated to delivering exceptional service, ensuring a seamless and impactful experience for our customer</p>
-                                    <!-- <h3 class="mt-lg-7 mt-5 fs-lg-3 fs-2 mb-4">Excited about our team?<br />we
-                                    are hiring!</h3> -->
-                                    <div class="mt-6">
+                                    <div class="mt-3">
                                         <a class="btn btn-primary mx-2 mt-3" href="https://dashboard.padmastudio.io/talent-cv" target="_blank">Drop your CV</a>
                                         <a class="btn btn-extra mx-2 mt-3" href="#!">Learn More</a>
                                     </div>
@@ -439,222 +562,40 @@
                                         before<br/>dropping your CV</p>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-9 col-md-11 col-sm-10 pb-8 pb-xl-0">
-                                <div class="slick-carousel slick-theme-primary slick-vertical-dots"
-                                    data-slick="{&quot;vertical&quot;:true,&quot;verticalSwiping&quot;:true,&quot;arrows&quot;:false,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:1000,&quot;slidesToScroll&quot;:1,&quot;mobileFirst&quot;:true,&quot;slidesToShow&quot;:2,&quot;responsive&quot;:[{&quot;breakpoint&quot;:1024,&quot;settings&quot;:{&quot;dots&quot;:true}},{&quot;breakpoint&quot;:600,&quot;settings&quot;:{&quot;dots&quot;:true}},{&quot;breakpoint&quot;:300,&quot;settings&quot;:{&quot;dots&quot;:true,&quot;verticalSwiping&quot;:false,&quot;vertical&quot;:false,&quot;slidesToShow&quot;:1}}]}">
-                                    <div class="row d-flex flex-center my-4">
-                                        <div class="col-xxl-4 col-xl-5 col-md-4 col-sm-6 col-7 mb-4 mb-xl-0">
-                                            <svg
-                                                class="h-team"
-                                                width="100%"
-                                                height="100%"
-                                                viewbox="0 0 240 240"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path
-                                                    d="M90.5117 12.5646L118.672 3.8754C159.699 -8.78414 203.821 10.4226 222.51 49.0773L223.613 51.3579C229.654 63.8525 232.234 77.7384 231.084 91.5691C228.81 118.934 212.245 143.059 187.524 155.012L175.767 160.696C163.708 166.527 149.868 167.496 137.114 163.402L136.306 163.143C124.071 159.216 110.793 160.146 99.2242 165.739C90.0855 170.158 79.8192 171.693 69.7876 170.142L58.2933 168.364C39.3175 165.429 22.9965 153.355 14.6384 136.068C11.1142 128.779 9.14397 120.837 8.85273 112.746L8.69184 108.276C7.75529 82.2577 19.5888 57.4227 40.3857 41.7598L55.1761 30.6207C65.8215 22.6033 77.7774 16.494 90.5117 12.5646Z"
-                                                    fill="#FEB850"></path>
-                                                <mask
-                                                    id="mask3"
-                                                    maskunits="userSpaceOnUse"
-                                                    x="0"
-                                                    y="0"
-                                                    width="240"
-                                                    height="238">
-                                                    <path
-                                                        d="M105.964 235.051L102.711 234.409C43.0235 222.626 9.16349e-06 170.279 3.84472e-06 109.44L2.98839e-06 99.6443C1.74327e-06 85.4019 3.05324 71.3249 8.95389 58.3623L15.6651 43.6191C27.7579 17.0534 54.2555 0.00152686 83.4441 0.00152431L93.3536 0.00152344C109.553 0.00152202 124.887 7.31539 135.082 19.905L137.929 23.4201C146.323 33.7863 158.949 39.8085 172.288 39.8085C183.164 39.8085 193.658 43.8171 201.764 51.0679L212.59 60.7517C230.031 76.3527 240 98.6451 240 122.046L240 128.664C240 139.264 238.263 149.793 234.858 159.831L234.156 161.904C222.183 197.203 193.193 224.068 157.087 233.324L155.8 233.654C139.5 237.832 122.472 238.31 105.964 235.051Z"
-                                                        fill="#FAFAFF"></path>
-                                                </mask>
-                                                <g mask="url(#mask3)">
-                                                    <rect y="0.000976562" width="240" height="239.999" fill="url(#pattern3)"></rect>
-                                                </g>
-                                                <path
-                                                    d="M195.218 72.5763L195.21 72.7099C195.164 73.4996 194.724 74.2133 194.039 74.6089C193.454 74.9464 192.753 75.0162 192.113 74.8005L191.363 74.5476C191.006 74.4272 190.627 74.389 190.253 74.4359L190.127 74.4518C189.305 74.5548 188.492 74.2051 188.002 73.5378C187.382 72.693 187.417 71.5345 188.087 70.7284L188.544 70.1781C189.18 69.4124 190.137 68.9865 191.131 69.0261L191.723 69.0497C192.967 69.0992 194.098 69.7826 194.72 70.8602L194.874 71.1269C195.128 71.5661 195.247 72.07 195.218 72.5763Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M212.501 0.809122L212.648 0.912573C213.523 1.52434 214.03 2.53493 213.999 3.60153C213.973 4.51177 213.556 5.36668 212.856 5.94834L212.035 6.63009C211.644 6.95458 211.331 7.3632 211.12 7.82543L211.049 7.98198C210.586 8.99794 209.609 9.68344 208.496 9.77338C207.087 9.88724 205.781 9.02708 205.33 7.68754L205.022 6.77297C204.593 5.50048 204.782 4.10093 205.531 2.98699L205.978 2.32382C206.915 0.931453 208.5 0.116715 210.178 0.165417L210.593 0.177469C211.277 0.19732 211.94 0.4169 212.501 0.809122Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M195.571 6.33707L195.563 6.47061C195.517 7.26037 195.077 7.97408 194.392 8.36963C193.807 8.70719 193.106 8.77698 192.466 8.56121L191.716 8.30831C191.359 8.18794 190.98 8.14977 190.606 8.19665L190.48 8.21253C189.658 8.31558 188.845 7.96582 188.355 7.2985C187.735 6.45375 187.77 5.29523 188.44 4.48916L188.897 3.93881C189.533 3.17309 190.49 2.74726 191.484 2.78686L192.076 2.81044C193.32 2.85995 194.451 3.54338 195.073 4.62099L195.227 4.88763C195.481 5.32687 195.6 5.83073 195.571 6.33707Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M193.121 31.2433L193.01 31.3175C192.352 31.7567 191.517 31.8353 190.789 31.5267C190.167 31.2634 189.689 30.7454 189.476 30.1048L189.226 29.3539C189.107 28.9966 188.909 28.6707 188.646 28.4006L188.557 28.3091C187.98 27.7156 187.77 26.8561 188.007 26.0631C188.308 25.0592 189.254 24.3891 190.301 24.4381L191.015 24.4715C192.01 24.5181 192.926 25.025 193.493 25.8429L193.831 26.3298C194.541 27.352 194.677 28.6666 194.191 29.8123L194.071 30.0958C193.873 30.5628 193.543 30.9617 193.121 31.2433Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M168.656 23.9823L168.777 23.9268C169.497 23.5986 170.334 23.6546 171.004 24.0759C171.575 24.4354 171.964 25.0233 172.072 25.6897L172.198 26.4709C172.259 26.8426 172.402 27.196 172.618 27.5046L172.691 27.6092C173.166 28.2875 173.236 29.1695 172.874 29.9143C172.417 30.8571 171.376 31.3672 170.35 31.1512L169.65 31.0038C168.676 30.7986 167.853 30.1516 167.424 29.2534L167.168 28.7187C166.632 27.5961 166.708 26.2767 167.37 25.2235L167.534 24.9628C167.804 24.5335 168.194 24.1926 168.656 23.9823Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M192.172 43.4294L192.296 43.4799C193.028 43.7788 193.561 44.4262 193.714 45.2024C193.844 45.8648 193.683 46.5513 193.272 47.0868L192.79 47.7144C192.561 48.0131 192.402 48.3598 192.325 48.7286L192.299 48.8535C192.131 49.6641 191.537 50.32 190.747 50.5676C189.747 50.881 188.662 50.4733 188.116 49.5788L187.743 48.9681C187.225 48.1184 187.131 47.0757 187.49 46.1473L187.704 45.5946C188.154 44.4341 189.166 43.585 190.387 43.345L190.689 43.2856C191.187 43.1877 191.702 43.2377 192.172 43.4294Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M230.863 45.596L230.929 45.6457C231.325 45.9392 231.547 46.4121 231.519 46.9039C231.495 47.3236 231.292 47.7129 230.961 47.9723L230.573 48.2765C230.389 48.4212 230.239 48.6058 230.136 48.8165L230.101 48.8878C229.874 49.3507 229.415 49.6546 228.9 49.6819C228.248 49.7164 227.657 49.3028 227.465 48.6788L227.335 48.2528C227.153 47.6601 227.258 47.0166 227.618 46.5121L227.833 46.2117C228.283 45.5811 229.025 45.2254 229.799 45.2693L229.99 45.2802C230.306 45.2981 230.609 45.4079 230.863 45.596Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M211.667 48.809L211.617 48.8757C211.321 49.2699 210.847 49.4891 210.356 49.4588C209.936 49.433 209.548 49.228 209.29 48.8959L208.988 48.5068C208.844 48.3216 208.66 48.1713 208.45 48.0671L208.379 48.0318C207.917 47.8028 207.615 47.3417 207.59 46.8268C207.559 46.175 207.975 45.5855 208.6 45.3973L209.027 45.2688C209.62 45.0901 210.263 45.1979 210.766 45.5606L211.065 45.7765C211.694 46.2297 212.046 46.9736 211.998 47.747L211.987 47.9383C211.967 48.2536 211.856 48.5562 211.667 48.809Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M211.052 25.4359L211.118 25.4855C211.514 25.779 211.736 26.2519 211.708 26.7437C211.684 27.1635 211.481 27.5527 211.15 27.8122L210.762 28.1163C210.578 28.2611 210.428 28.4457 210.325 28.6563L210.29 28.7276C210.063 29.1906 209.604 29.4945 209.089 29.5217C208.437 29.5563 207.846 29.1426 207.654 28.5187L207.524 28.0926C207.342 27.4999 207.447 26.8564 207.807 26.3519L208.022 26.0516C208.472 25.421 209.214 25.0652 209.988 25.1091L210.179 25.12C210.495 25.1379 210.798 25.2477 211.052 25.4359Z"
-                                                    fill="#EEEFF1"></path>
-                                                <defs>
-                                                    <pattern
-                                                        id="pattern3"
-                                                        patterncontentunits="objectBoundingBox"
-                                                        width="1"
-                                                        height="1">
-                                                        <use
-                                                            xlink:href="#image3"
-                                                            transform="translate(0 -0.0829673) scale(0.000366166)"></use>
-                                                    </pattern>
-                                                    <image
-                                                        id="image3"
-                                                        width="2731"
-                                                        height="3100"
-                                                        xlink:href="assets/img/team/adult-boy-1.png"></image>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div
-                                            class="col-xxl-7 col-xl-7 col-lg-8 col-md-7 col-10 text-center text-md-left">
-                                            <h4 class="font-weight-bold text-700">Lionel d’ costa</h4>
-                                            <h6 class="text-500 font-weight-bold fs-0">Founder &amp; CEO</h6>
-                                            <p
-                                                class="font-weight-bold display-4 mb-0 text-200 line-height-0 pt-3 pb-1"
-                                                style="text-indent: -5px">
-                                                <em>"</em>
-                                            </p>
-                                            <p class="text-900">A design platform should unite code, content, and design,
-                                                helping people in each discipline collaborate. And That is Shape for you.</p>
-                                            <div class="row justify-content-center justify-content-md-start">
-                                                <div class="col-auto">
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-twitter social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-facebook-f social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-instagram social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-linkedin-in social-icon"></span></a>
+                            <div class="col-xxl-5 col-xl-6 col-lg-7 col-11  pl-xxl-0 pl-xl-6 order-xl-0">
+                                <div class="row justify-content-center absolute">
+                                    <div class="w-full col-xxl-10 col-xl-10 col-lg-10 col-9 mb-md-4 mb-lg-0 text-center">
+                                        <div class="scroll-container-vertical" style="overflow: hidden; height: 400px;"> 
+                                            <div class="scroll-content-vertical d-flex flex-column"> <!-- Vertical scrolling by default -->
+                            
+                                                <div class="testimonial" style="padding-top: 20px; padding-bottom: 20px;">
+                                                    <img class="px-3" src="assets/img/team/oka.png" alt="" width="auto" height="100" style="border-radius: 100%;">
+                                                    <div style="text-align: left;">
+                                                        <p class="text-body-tertiary text-justify ">"Padma Creative Studio has unlocked a world of creativity for me. The lessons flow seamlessly, guiding you from novice to skilled artist with ease."</p>
+                                                        <span class="font-weight-bold">Oka Dharmawan</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row d-flex flex-center my-4">
-                                        <div class="col-xxl-4 col-xl-5 col-md-4 col-sm-6 col-7 mb-4 mb-xl-0">
-                                            <svg
-                                                class="h-team"
-                                                width="100%"
-                                                height="100%"
-                                                viewbox="0 0 240 240"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <path
-                                                    d="M90.5117 12.5646L118.672 3.8754C159.699 -8.78414 203.821 10.4226 222.51 49.0773L223.613 51.3579C229.654 63.8525 232.234 77.7384 231.084 91.5691C228.81 118.934 212.245 143.059 187.524 155.012L175.767 160.696C163.708 166.527 149.868 167.496 137.114 163.402L136.306 163.143C124.071 159.216 110.793 160.146 99.2242 165.739C90.0855 170.158 79.8192 171.693 69.7876 170.142L58.2933 168.364C39.3175 165.429 22.9965 153.355 14.6384 136.068C11.1142 128.779 9.14397 120.837 8.85273 112.746L8.69184 108.276C7.75529 82.2577 19.5888 57.4227 40.3857 41.7598L55.1761 30.6207C65.8215 22.6033 77.7774 16.494 90.5117 12.5646Z"
-                                                    fill="#5A45FF"></path>
-                                                <mask
-                                                    id="mask2"
-                                                    maskunits="userSpaceOnUse"
-                                                    x="0"
-                                                    y="0"
-                                                    width="240"
-                                                    height="238">
-                                                    <path
-                                                        d="M105.964 235.051L102.711 234.409C43.0235 222.626 9.16349e-06 170.279 3.84472e-06 109.44L2.98839e-06 99.6443C1.74327e-06 85.4019 3.05324 71.3249 8.95389 58.3623L15.6651 43.6191C27.7579 17.0534 54.2555 0.00152686 83.4441 0.00152431L93.3536 0.00152344C109.553 0.00152202 124.887 7.31539 135.082 19.905L137.929 23.4201C146.323 33.7863 158.949 39.8085 172.288 39.8085C183.164 39.8085 193.658 43.8171 201.764 51.0679L212.59 60.7517C230.031 76.3527 240 98.6451 240 122.046L240 128.664C240 139.264 238.263 149.793 234.858 159.831L234.156 161.904C222.183 197.203 193.193 224.068 157.087 233.324L155.8 233.654C139.5 237.832 122.472 238.31 105.964 235.051Z"
-                                                        fill="#FAFAFF"></path>
-                                                </mask>
-                                                <g mask="url(#mask2)">
-                                                    <rect y="0.000976562" width="240" height="239.999" fill="url(#pattern2)"></rect>
-                                                </g>
-                                                <path
-                                                    d="M195.218 72.5763L195.21 72.7099C195.164 73.4996 194.724 74.2133 194.039 74.6089C193.454 74.9464 192.753 75.0162 192.113 74.8005L191.363 74.5476C191.006 74.4272 190.627 74.389 190.253 74.4359L190.127 74.4518C189.305 74.5548 188.492 74.2051 188.002 73.5378C187.382 72.693 187.417 71.5345 188.087 70.7284L188.544 70.1781C189.18 69.4124 190.137 68.9865 191.131 69.0261L191.723 69.0497C192.967 69.0992 194.098 69.7826 194.72 70.8602L194.874 71.1269C195.128 71.5661 195.247 72.07 195.218 72.5763Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M212.501 0.809122L212.648 0.912573C213.523 1.52434 214.03 2.53493 213.999 3.60153C213.973 4.51177 213.556 5.36668 212.856 5.94834L212.035 6.63009C211.644 6.95458 211.331 7.3632 211.12 7.82543L211.049 7.98198C210.586 8.99794 209.609 9.68344 208.496 9.77338C207.087 9.88724 205.781 9.02708 205.33 7.68754L205.022 6.77297C204.593 5.50048 204.782 4.10093 205.531 2.98699L205.978 2.32382C206.915 0.931453 208.5 0.116715 210.178 0.165417L210.593 0.177469C211.277 0.19732 211.94 0.4169 212.501 0.809122Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M195.571 6.33707L195.563 6.47061C195.517 7.26037 195.077 7.97408 194.392 8.36963C193.807 8.70719 193.106 8.77698 192.466 8.56121L191.716 8.30831C191.359 8.18794 190.98 8.14977 190.606 8.19665L190.48 8.21253C189.658 8.31558 188.845 7.96582 188.355 7.2985C187.735 6.45375 187.77 5.29523 188.44 4.48916L188.897 3.93881C189.533 3.17309 190.49 2.74726 191.484 2.78686L192.076 2.81044C193.32 2.85995 194.451 3.54338 195.073 4.62099L195.227 4.88763C195.481 5.32687 195.6 5.83073 195.571 6.33707Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M193.121 31.2433L193.01 31.3175C192.352 31.7567 191.517 31.8353 190.789 31.5267C190.167 31.2634 189.689 30.7454 189.476 30.1048L189.226 29.3539C189.107 28.9966 188.909 28.6707 188.646 28.4006L188.557 28.3091C187.98 27.7156 187.77 26.8561 188.007 26.0631C188.308 25.0592 189.254 24.3891 190.301 24.4381L191.015 24.4715C192.01 24.5181 192.926 25.025 193.493 25.8429L193.831 26.3298C194.541 27.352 194.677 28.6666 194.191 29.8123L194.071 30.0958C193.873 30.5628 193.543 30.9617 193.121 31.2433Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M168.656 23.9823L168.777 23.9268C169.497 23.5986 170.334 23.6546 171.004 24.0759C171.575 24.4354 171.964 25.0233 172.072 25.6897L172.198 26.4709C172.259 26.8426 172.402 27.196 172.618 27.5046L172.691 27.6092C173.166 28.2875 173.236 29.1695 172.874 29.9143C172.417 30.8571 171.376 31.3672 170.35 31.1512L169.65 31.0038C168.676 30.7986 167.853 30.1516 167.424 29.2534L167.168 28.7187C166.632 27.5961 166.708 26.2767 167.37 25.2235L167.534 24.9628C167.804 24.5335 168.194 24.1926 168.656 23.9823Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M192.172 43.4294L192.296 43.4799C193.028 43.7788 193.561 44.4262 193.714 45.2024C193.844 45.8648 193.683 46.5513 193.272 47.0868L192.79 47.7144C192.561 48.0131 192.402 48.3598 192.325 48.7286L192.299 48.8535C192.131 49.6641 191.537 50.32 190.747 50.5676C189.747 50.881 188.662 50.4733 188.116 49.5788L187.743 48.9681C187.225 48.1184 187.131 47.0757 187.49 46.1473L187.704 45.5946C188.154 44.4341 189.166 43.585 190.387 43.345L190.689 43.2856C191.187 43.1877 191.702 43.2377 192.172 43.4294Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M230.863 45.596L230.929 45.6457C231.325 45.9392 231.547 46.4121 231.519 46.9039C231.495 47.3236 231.292 47.7129 230.961 47.9723L230.573 48.2765C230.389 48.4212 230.239 48.6058 230.136 48.8165L230.101 48.8878C229.874 49.3507 229.415 49.6546 228.9 49.6819C228.248 49.7164 227.657 49.3028 227.465 48.6788L227.335 48.2528C227.153 47.6601 227.258 47.0166 227.618 46.5121L227.833 46.2117C228.283 45.5811 229.025 45.2254 229.799 45.2693L229.99 45.2802C230.306 45.2981 230.609 45.4079 230.863 45.596Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M211.667 48.809L211.617 48.8757C211.321 49.2699 210.847 49.4891 210.356 49.4588C209.936 49.433 209.548 49.228 209.29 48.8959L208.988 48.5068C208.844 48.3216 208.66 48.1713 208.45 48.0671L208.379 48.0318C207.917 47.8028 207.615 47.3417 207.59 46.8268C207.559 46.175 207.975 45.5855 208.6 45.3973L209.027 45.2688C209.62 45.0901 210.263 45.1979 210.766 45.5606L211.065 45.7765C211.694 46.2297 212.046 46.9736 211.998 47.747L211.987 47.9383C211.967 48.2536 211.856 48.5562 211.667 48.809Z"
-                                                    fill="#EEEFF1"></path>
-                                                <path
-                                                    d="M211.052 25.4359L211.118 25.4855C211.514 25.779 211.736 26.2519 211.708 26.7437C211.684 27.1635 211.481 27.5527 211.15 27.8122L210.762 28.1163C210.578 28.2611 210.428 28.4457 210.325 28.6563L210.29 28.7276C210.063 29.1906 209.604 29.4945 209.089 29.5217C208.437 29.5563 207.846 29.1426 207.654 28.5187L207.524 28.0926C207.342 27.4999 207.447 26.8564 207.807 26.3519L208.022 26.0516C208.472 25.421 209.214 25.0652 209.988 25.1091L210.179 25.12C210.495 25.1379 210.798 25.2477 211.052 25.4359Z"
-                                                    fill="#EEEFF1"></path>
-                                                <defs>
-                                                    <pattern
-                                                        id="pattern2"
-                                                        patterncontentunits="objectBoundingBox"
-                                                        width="1"
-                                                        height="1">
-                                                        <use
-                                                            xlink:href="#image2"
-                                                            transform="translate(0 -0.0829673) scale(0.000366166)"></use>
-                                                    </pattern>
-                                                    <image
-                                                        id="image2"
-                                                        width="2731"
-                                                        height="3100"
-                                                        xlink:href="assets/img/team/adult-girl-1.png"></image>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <div
-                                            class="col-xxl-7 col-xl-7 col-lg-8 col-md-7 col-10 text-center text-md-left">
-                                            <h4 class="font-weight-bold text-700">Mila dalush</h4>
-                                            <h6 class="text-500 font-weight-bold fs-0">business developement manager</h6>
-                                            <p
-                                                class="font-weight-bold display-4 mb-0 text-200 line-height-0 pt-3 pb-1"
-                                                style="text-indent: -5px">
-                                                <em>"</em>
-                                            </p>
-                                            <p class="text-900">Web publishing platforms should empower you to build
-                                                whatever you like. Here at Shape we we work on that for you.</p>
-                                            <div class="row justify-content-center justify-content-md-start">
-                                                <div class="col-auto">
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-twitter social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-facebook-f social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block py-2 pr-4 social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-instagram social-icon"></span></a>
-                                                    <a
-                                                        class="text-decoration-none d-inline-block social-icon-hover-primary"
-                                                        href="#!">
-                                                        <span class="fab fa-linkedin-in social-icon"></span></a>
+
+                                                <div class="testimonial" style="padding-top: 20px; padding-bottom: 20px;">
+                                                    <img class="px-3" src="assets/img/team/kayika.jpeg" alt="" width="auto" height="100" style="border-radius: 100%;">
+                                                    <div style="text-align: left;">
+                                                        <p class="text-body-tertiary text-justify">"From knowing nothing about SketchUp to being able to create complex backgrounds, Padma Creative Studio transformed my learning journey."</p>
+                                                        <span class="font-weight-bold">Dewa Kayika</span>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="testimonial" style="padding-top: 20px; padding-bottom: 20px;">
+                                                    <img class="px-3" src="assets/img/team/gusadi.jpg" alt="" width="auto" height="100" style="border-radius: 100%;">
+                                                    <div style="text-align: left;">
+                                                        <p class="text-body-tertiary text-justify ">"An absolute gem for aspiring designers. The platform feels intuitive and immersive, and each lesson ignites a deeper passion for webtoon design."</p>
+                                                        <span class="font-weight-bold">Gus Adi</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             
                         </div>
                     </div>
@@ -699,17 +640,443 @@
                         </div>
                     </div>
                 </section>
-<!--                 <section class="bg-dark py-2">
+
+                <section class="text-center">
                     <div class="container">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-auto">
-                                <p>Padma Creative Studio - 2024</p>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <div class="col-lg-6">
+                                    <h2 class="fs-lg-4 fs-md-3 fs-2 font-weight-bold" style="text-align: left">
+                                        What we have done
+                                    </h2>
+                                    <p class="text-body-tertiary fst-italic" style="text-align: left">
+                                        Explore our portfolio to see our work in action. From vibrant backgrounds to dynamic scenes, our projects showcase our expertise in bringing webtoons to life with stunning visuals and immersive storytelling.
+                                    </p>
+                                </div>
+                                <div class="row mt-2" id="portfolio-gallery" >
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/1.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Furawashi</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">Each layer was meticulously crafted to ensure it
+                                                    complemented the webtoon’s aesthetic and storyline.</p>
+                                                <button id="myBtn1" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal1" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Furawashi</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Furawashi. The
+                                                                scope of work included designing the angles and perspectives of
+                                                                3D assets provided by the client. The PADMA Studio team worked
+                                                                to ensure that the backgrounds aligned with the storyline and
+                                                                the perspective of the storyboard images. We handled the line
+                                                                art, base textures, and shadows on different layers as needed
+                                                                for the job.</p>
+        
+                                                            <p>In the next step, we imported each layer into Photoshop files,
+                                                                which were then arranged according to the story and
+                                                                storyboard.Content updates and copywriting improvements were
+                                                                also part of
+                                                                the project.</p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/furawashi/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/6.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/7.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/8.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/9.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/furawashi/10.png" alt="Forest" width="auto" height="400">
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/2.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Keiken Ninz</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">This project provided
+                                                    valuable experience in integrating 3D assets into a 2D webtoon format</p>
+                                                <button id="myBtn2" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal2" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Keiken Ninzu</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Keiken Ninz. The
+                                                                scope of work included designing the angles and perspectives of
+                                                                3D assets provided by the client. The PADMA Studio team worked
+                                                                to ensure that the backgrounds aligned with the storyline and
+                                                                the perspective of the storyboard images. We handled the line
+                                                                art, base textures, and shadows on different layers as needed
+                                                                for the job. In the next step, we imported each layer into
+                                                                Photoshop files, which were then arranged according to the story
+                                                                and storyboard.
+                                                                Content updates and copywriting improvements were also part of
+                                                                the project.
+                                                            </p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>Keiken Ninz is a webtoon that requires meticulous background
+                                                                design to enhance its storytelling. PADMA Studio's task was to
+                                                                seamlessly integrate 3D assets into the webtoon's visual
+                                                                narrative, ensuring consistency and coherence with the
+                                                                storyboard.</p>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/Keiken/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/6.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/7.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/8.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/9.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Keiken/10.png" alt="Forest" width="auto" height="400">
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/3.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Assassin is Working in Office</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">Assassin is Working in
+                                                    Office is a webtoon that requires meticulous background design to enhance
+                                                    its storytelling</p>
+                                                <button id="myBtn3" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal3" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Assassin is Working in Office</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Assassin is
+                                                                Working in Office. The scope of work included designing the
+                                                                angles and perspectives of 3D assets provided by the client. The
+                                                                PADMA Studio team worked to ensure that the backgrounds aligned
+                                                                with the storyline and the perspectives of the storyboard
+                                                                images. We handled the line art, base textures, and shadows on
+                                                                different layers as required for the job.
+        
+                                                                In the subsequent steps, we imported each layer into Photoshop
+                                                                files, which were then assembled according to the story and
+                                                                storyboard.
+                                                            </p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                            <p>One of the main challenges was maintaining visual consistency
+                                                                while integrating the 3D assets into the 2D webtoon format.
+                                                                PADMA Studio addressed this by carefully aligning each
+                                                                background element with the storyboard perspectives. We used
+                                                                different layers for line art, textures, and shadows to allow
+                                                                for flexibility and precision in the final composition.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/Assasin/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/6.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/7.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/8.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/9.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Assasin/10.png" alt="Forest" width="auto" height="400">
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/4.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Tasogare</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">PADMA Studio began by analyzing the 3D assets and storyboard
+                                                    provided by the client.</p>
+                                                <button id="myBtn3" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal3" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Tasogare</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Tasogare. The
+                                                                scope of work included designing the angles and perspectives of
+                                                                3D assets provided by the client. The PADMA Studio team worked
+                                                                to ensure that the backgrounds aligned with the storyline and
+                                                                the perspectives of the storyboard images. We handled the line
+                                                                art, base textures, and shadows on different layers as required
+                                                                for the job
+                                                            </p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/Tasogare/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/6.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/7.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/8.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/9.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Tasogare/10.png" alt="Forest" width="auto" height="400">
+                                                          </div>
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/5.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Lucky Dog</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">Our team focused on designing the
+                                                    appropriate angles and perspectives to match the scenes.</p>
+                                                <button id="myBtn3" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal3" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Lucky Dog</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Lucky Dog. The
+                                                                scope of work included designing the angles and perspectives of
+                                                                3D assets provided by the client. The PADMA Studio team worked
+                                                                to ensure that the backgrounds aligned with the storyline and
+                                                                the perspectives of the storyboard images. We handled the line
+                                                                art, base textures, and shadows on different layers as required
+                                                                for the job.</p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/Lucky/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/6.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/7.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/8.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/9.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/Lucky/10.png" alt="Forest" width="auto" height="400">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 col-md-4 mb-4 isotope-item photography">
+                                        <div class="portfolio-webtoon">
+                                            <img class="rounded w-100 fit-cover"
+                                                src="assets/img/webtoon/6.jpg"
+                                                alt="" />
+                                            <div class="title-webtoon">
+                                                <h5 class="text-white">Magical Kiss</h5>
+                                                <p class="fs-10 text-white" style="padding-right: 10%;">Using
+                                                    tools like Adobe Photoshop, we created line art, base textures,
+                                                    and shadows, layering them to achieve the desired depth and
+                                                    detail</p>
+                                                <button id="myBtn3" class="btn btn-light mr-1 mb-1">
+                                                    Learn More
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="myModal3" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <article class="blog-post">
+                                                    <h1 class="blog-title">Magical Kiss</h1>
+                                                    <p class="blog-meta">Project by ViviOn Japan</p>
+                                                    <div class="blog-content">
+                                                        <div class="text-lg-start">
+                                                            <h4>What we do:</h4>
+                                                            <p>In this project, PADMA Studio collaborated on the process of
+                                                                replacing the background for the webtoon titled Lucky Dog. The
+                                                                scope of work included designing the angles and perspectives of
+                                                                3D assets provided by the client. The PADMA Studio team worked
+                                                                to ensure that the backgrounds aligned with the storyline and
+                                                                the perspectives of the storyboard images. We handled the line
+                                                                art, base textures, and shadows on different layers as required
+                                                                for the job.</p>
+                                                        </div>
+        
+                                                        <div class="text-lg-start">
+                                                            <h4>Creative Process</h4>
+                                                            <p>PADMA Studio began by analyzing the 3D assets and storyboard
+                                                                provided by the client. Our team focused on designing the
+                                                                appropriate angles and perspectives to match the scenes. Using
+                                                                tools like Adobe Photoshop, we created line art, base textures,
+                                                                and shadows, layering them to achieve the desired depth and
+                                                                detail. Each layer was meticulously crafted to ensure it
+                                                                complemented the webtoon’s aesthetic and storyline.</p>
+                                                        </div>
+        
+                                                        <div class="scroll-container">
+                                                            <img src="assets/img/webtoon/magical/1.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/magical/2.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/magical/3.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/magical/4.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/magical/5.png" alt="Forest" width="auto" height="400">
+                                                            <img src="assets/img/webtoon/magical/6.png" alt="Forest" width="auto" height="400">
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <a class="back btn btn-outline">
+                                                    Close
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section> -->
-                <!-- <section> close ============================-->
-                <!-- ============================================-->
+                    </div><!-- end of .container-->
+                </section>
 
             </main>
             <!-- ===============================================-->
@@ -730,9 +1097,9 @@
             <script src="assets/lib/slick-carousel/slick.min.js"></script>
             <script src="assets/js/theme.js"></script>
             <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
             <script>
@@ -740,6 +1107,94 @@
                   delay: 500, // 0.5 detik
                 });
               </script>
+
+            <script>
+                const scrollContainer = document.querySelector('.scroll-container');
+                const scrollContent = document.querySelector('.scroll-content');
+
+                // Kloning konten untuk membuat efek infinity scroll
+                scrollContent.innerHTML += scrollContent.innerHTML;
+
+                function autoScroll() {
+                    scrollContainer.scrollLeft += 1; // Sesuaikan kecepatan scroll
+
+                    // Reset scroll jika mencapai akhir konten asli
+                    if (scrollContainer.scrollLeft >= scrollContent.scrollWidth / 2) {
+                        scrollContainer.scrollLeft = 0;
+                    }
+                }
+
+                setInterval(autoScroll, 20); // Interval waktu dalam milidetik
+            </script>
+            <script>
+                const scrollContainerVertical = document.querySelector('.scroll-container-vertical');
+                const scrollContentVertical = document.querySelector('.scroll-content-vertical');
+
+                // Clone content to create the infinite scroll effect
+                scrollContentVertical.innerHTML += scrollContentVertical.innerHTML;
+
+                function autoScroll() {
+                    scrollContainerVertical.scrollTop += 1; // Adjust scroll speed
+
+                    // Reset scroll when reaching the end of the original content
+                    if (scrollContainerVertical.scrollTop >= scrollContentVertical.scrollHeight / 2) {
+                        scrollContainerVertical.scrollTop = 0;
+                    }
+                }
+
+                setInterval(autoScroll, 20); // Interval in milliseconds
+            </script>
+
+            <script>
+                // Get all the buttons
+                var buttons = document.querySelectorAll('[id^="myBtn"]');
+
+                // Get all the modals
+                var modals = document.querySelectorAll('.modal');
+
+                // Get all the close buttons
+                var spans = document.querySelectorAll('.close');
+
+                // Get all the close buttons
+                var spans = document.querySelectorAll('.back');
+
+
+                // Loop through all buttons to assign click events
+                buttons.forEach(function (button, index) {
+                    button.addEventListener('click', function () {
+                        modals[index].style.display = "block";
+                    });
+                });
+
+                // Loop through all close buttons to assign click events
+                spans.forEach(function (span, index) {
+                    span.addEventListener('click', function () {
+                        modals[index].style.display = "none";
+                    });
+                });
+
+                // Loop through all close buttons to assign click events
+                spans.forEach(function (span, index) {
+                    span.addEventListener('click', function () {
+                        modals[index].style.display = "none";
+                    });
+                });
+
+
+
+                // Close the modal if the user clicks outside of it
+                window.addEventListener('click', function (event) {
+                    modals.forEach(function (modal) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    });
+                });
+
+            </script>
+
+
+
               
         </body>
     </html>
